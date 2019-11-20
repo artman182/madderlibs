@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-animate.js"></script>
+<script src= "http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<script src="script.js"></script>
+
+</head>
+
+  <body ng-app="myApp">
+    
+    <div ng-controller="myCtrl" class="main">
+    
+    <h1><span>Madder</span> Libs</h1>
+    
+    <h2>Story #1</h2>
+    
+    <form name="myForm">
+    <p>Noun: <input type="text" ng-model="noun_a1" required>  Pronoun for this noun: <input type="text" ng-model="pronoun_a1" required></p>
+    <p>Adjective: <input type="text" ng-model="adjective_a1" required></p>
+    <p>Proper Name: <input type="text" ng-model="name_a1" required></p>
+    <p>Verb: <input type="text" ng-model="verb_a1" required></p>
+    <p>Place: <input type="text" ng-model="place_a1" required></p>
+    <p>Adjective: <input type="text" ng-model="adjective_a2" required></p>
+    <p>Adjective: <input type="text" ng-model="adjective_a3" required></p>
+    <p>Noun: <input type="text" ng-model="noun_a2" required>  Pronoun for this noun: <input type="text" ng-model="pronoun_a2" required></p>
+    <p>Present-tense Verb (with -ing): 
+      <input type="text" ng-model="verb_a2" required></p>
+    <p>Noun: <input type="text" ng-model="noun_a3" required></p>
+    <p>Proper Name: <input type="text" ng-model="name_a2" required></p>
+    <p>Plural Noun: <input type="text" ng-model="noun_a4" required></p>
+    <p>Adjective: <input type="text" ng-model="adjective_a4" required></p>
+    <p>Foreign Country: <input type="text" ng-model="country_a1" required></p>
+    <p>Plural Noun: <input type="text" ng-model="noun_a5" required></p>
+    <p>Adjective: <input type="text" ng-model="adjective_a5" required></p>
+    <p>Verb: <input type="text" ng-model="verb_a3" required></p>
+    <p>Noun: <input type="text" ng-model="noun_a6" required></p>
+    <p>Day of the week: <input type="text" ng-model="day_a1" required></p>
+    <p>Restaurant: <input type="text" ng-model="place_a2" required></p>
+    </form>
+    
+    <button ng-disabled="myForm.$invalid" class="showstory1">Show the Story!</button>
+    
+    
+    <br>
+    <br>
+    <story class="one">
+      
+    <p>Once upon a time there was an old
+    
+    <noun ng-bind="noun_a1"></noun> 
+    
+    who was very, very
+    
+    <adjective ng-bind="adjective_a1"></adjective>.
+    
+    The <noun ng-bind="noun_a1"></noun>'s 
+  
+    name was
+    
+    <name ng-bind="(name_a1 | capitalize)"></name> and
+    
+   <pronoun ng-bind="pronoun_a1"></pronoun> liked to
+    
+    <verb ng-bind="verb_a1"></verb>
+    
+    to the
+    
+    <place ng-bind="place_a1"></place> a lot. One 
+    
+    <adjective ng-bind="adjective_a2"></adjective>
+    
+    day, 
+    
+    <name ng-bind="(name_a1 | capitalize)"></name>
+    
+    met a 
+    
+    <adjective ng-bind="adjective_a3"></adjective>
+    <noun ng-bind="noun_a2"></noun>
+    
+    while
+    
+    <verb ng-bind="verb_a2"></verb> down the
+    <noun ng-bind="noun_a3"></noun>.
+    
+    </p>
+    
+    <p>"What is your name?" <name ng-bind="(name_a1 | capitalize)"></name> asked the <adjective ng-bind="adjective_a3"></adjective> <noun ng-bind="noun_a2"></noun>.</p>
+    
+    <p>"My name is <name ng-bind="(name_a2 | capitalize)"></name>," said the <noun ng-bind="noun_a2"></noun>, "what's yours?"</p>
+    
+    <p>"Mine's <name ng-bind="(name_a1 | capitalize)"></name>!" replied <name ng-bind="(name_a1 | capitalize)"></name>. "Hey, do you like <noun ng-bind="noun_a4"></noun>?"</p>
+    
+    <p>"No," replied <name ng-bind="(name_a2 | capitalize)"></name>, "I think they're too <adjective ng-bind="adjective_a4"></adjective>. 
+    I wish they would all leave and go to <country ng-bind="country_a1"></country>!"</p>
+    
+    <p>"Well, then, do you like <noun ng-bind="noun_a5"></noun>?" asked <name ng-bind="(name_a1 | capitalize)"></name>. "Cuz I sure do!"</p>
+    
+    <p>"Oh, I LOVE <noun ng-bind="noun_a5"></noun>, especially when they're <adjective ng-bind="adjective_a5"></adjective>!" said <name ng-bind="(name_a2 | capitalize)"></name>.</p>
+    
+    <p>"Cool!" said <name ng-bind="(name_a1 | capitalize)"></name>. "Do you wanna be my friend?!"</p>
+    
+    <p>"OK!" said <name ng-bind="(name_a2 | capitalize)"></name>. "But only if you can <verb ng-bind="verb_a3"></verb> faster than a big <noun ng-bind="noun_a6"></noun>!"</p>
+    
+    <p>"I totally can!" said <name ng-bind="(name_a1 | capitalize)"></name>. "Especially on <day ng-bind="day_a1"></day>s!"</p>
+    <p>"Great!"</p>
+    <p>So the two new friends decided to go to the <place ng-bind="place_a1"></place> together, and then go eat at <place ng-bind="place_a2"></place>.</p>
+    
+    <p>THE END</p>
+    
+    </story>
+    <hr>
+    <h2>Story #2</h2>
+    <form name="myForm2">
+    <p>Boy's Proper Name: <input type="text" ng-model="name_b1" required></p>
+    <p>Girl's Proper Name: <input type="text" ng-model="name_b2" required></p>
+    <p>Adjective: <input type="text" ng-model="adjective_b1" required></p>
+    <p>Plural Noun: <input type="text" ng-model="noun_b1" required></p>
+    <p>Plural Noun: <input type="text" ng-model="noun_b2" required></p>
+    <p>An item of food: <input type="text" ng-model="noun_b3" required></p>
+    <p>Past Tense Verb: <input type="text" ng-model="verb_b1" required></p>
+    <p>Past Tense Verb: <input type="text" ng-model="verb_b2" required></p>
+    <p>A body part: <input type="text" ng-model="noun_b4" required></p>
+    <p>Adjective: <input type="text" ng-model="adjective_b2" required></p>
+    <p>Verb: <input type="text" ng-model="verb_b3" required></p>
+    <p>Noun: <input type="text" ng-model="noun_b5" required></p>
+    <p>Sports Item: <input type="text" ng-model="noun_b6" required></p>
+    <p>An item of food: <input type="text" ng-model="noun_b7" required></p>
+    <p>A really silly, made-up word: <input type="text" ng-model="word_b1" required></p>
+    <p>Adjective: <input type="text" ng-model="adjective_b3" required></p>
+    <p>Adjective: <input type="text" ng-model="adjective_b4" required></p>
+    </form>
+    <button ng-disabled="myForm2.$invalid" class="showstory2">Show the Story!</button>
+    <br>
+    <br>
+    <story class="two">
+      <p><name ng-bind="(name_b1 | capitalize)"></name> 
+      was an astronaut who loved flying around space in his 
+      <adjective ng-bind="adjective_b1"></adjective> 
+      spaceship. He loved space because it contained lots of pretty 
+      <noun ng-bind="noun_b1"></noun>. One day on his way to the space station he flew past lots of asteroids and 
+      <noun ng-bind="noun_b2"></noun>. He had to avoid running into them.</p>
+      <p>When he arrived at the space station, Commander 
+      <name ng-bind="(name_b2 | capitalize)"></name> was there at the docking bay doors to greet him. 
+      She told him it was a very exciting day because aliens had contacted them! 
+      <name ng-bind="(name_b1 | capitalize)"></name> was very excited as well and he asked 
+      <name ng-bind="(name_b2 | capitalize)"></name> to show him the messages. </p>
+      <p>"Hi, we are the 
+      <noun ng-bind="(noun_b3 | capitalize)"></noun>, and we would like to meet you on the moon," the first message said.</p>
+      <p>"Wow!" said <name ng-bind="(name_b1 | capitalize)"></name>. "Are we going to meet them?"</p>
+      <p>"Yes," 
+      <name ng-bind="(name_b2 | capitalize)"></name> replied. "The Captain said that we are heading there shortly."</p>
+      <p><name ng-bind="(name_b1 | capitalize)"></name> and 
+      <name ng-bind="(name_b2 | capitalize)"></name> were both very happy that they would finally get to meet aliens. They 
+      <verb ng-bind="verb_b1"></verb> and 
+      <verb ng-bind="verb_b2"></verb> down the hallway and to the bridge. There, Captain 
+      <noun ng-bind="(noun_b4 | capitalize)"></noun> was waiting for them.</p>
+      <p>"Hello!" the Captain said to them. "This is a 
+      <adjective ng-bind="adjective_b2"></adjective> day, not only for us, but all of history!"</p>
+      <p>"I can't wait to see what they <noun ng-bind="noun_b3 | capitalize)"></noun> look like!" 
+      <name ng-bind="(name_b1 | capitalize)"></name> said. He wanted to 
+      <verb ng-bind="verb_b3"></verb> all around the station. 
+      <name ng-bind="(name_b2 | capitalize)"></name> just said in a chair over by the thing and smiled real big.</p>
+      <p>They had to avoid running into an asteroid and the  
+      <noun ng-bind="noun_b5"></noun> on the way to the moon. But the rest of the trip was smooth-sailing. 
+      When they landed they saw the alien ship, as it had already landed. It looked like a giant 
+      <noun ng-bind="noun_b6"></noun>.</p>
+      <p>"There it is!" yelled 
+      <name ng-bind="(name_b1 | capitalize)"></name>. He ran over to the door. The Captain and 
+      <name ng-bind="(name_b2 | capitalize)"></name> followed him. When they got off of the ship, the captain of the alien ship got off of his. 
+      He sure was strange-looking. 
+      <name ng-bind="(name_b1 | capitalize)"></name> thought he looked like a big 
+      <noun ng-bind="noun_b7"></noun>.</p>
+      <p>"Hello, I come in peace!" said the alien. "My name is 
+      <word ng-bind="(word_b1 | capitalize)"></word>."</p>
+      <p>"We come in peace, too!" said the Captain. "My name is Captain 
+      <noun ng-bind="(noun_b4 | capitalize)"></noun>, and this is Corporal 
+      <name ng-bind="(name_b1 | capitalize)"></name> and Commander 
+      <name ng-bind="(name_b2 | capitalize)"></name>. We are from Earth."</p>
+      <p>"We think Earth is really 
+      <adjective ng-bind="adjective_b3"></adjective>," said 
+      <word ng-bind="(word_b1 | capitalize)"></word>. "But I like you all. Let's be friends!"</p>
+      <p>And they all did become friends. And all the aliens became friends with all the people of Earth.
+      Even the <adjective ng-bind="adjective_b4"></adjective> ones.</p>
+      <p>THE END</p>
+    </story>
+    
+    </div>
+    
+  </body>
+
+</html>
